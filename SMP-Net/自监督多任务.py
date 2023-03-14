@@ -1003,7 +1003,7 @@ def main():
                                                     optimizer.step()
                                                 else:
                                                     # loss = +loss3 +loss_reconstrcu+loss_constract*0.1
-                                                    loss = loss3#+loss_reconstrcu+loss_constract
+                                                    loss = loss3+loss_reconstrcu+loss_constract
                                                     loss_train += loss
                                                     loss.backward()
                                                     optimizer2.step()
