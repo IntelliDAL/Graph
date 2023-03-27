@@ -35,7 +35,7 @@ def load_graph_classification_dataset(dataset_name, deg4feat=False):
             for d, n in Counter(degrees).items():
                 if d > MAX_DEGREES:
                     oversize += n
-            # print(f"N > {MAX_DEGREES}, #NUM: {oversize}, ratio: {oversize/sum(degrees):.8f}")
+
             feature_dim = min(feature_dim, MAX_DEGREES)
 
             feature_dim += 1
