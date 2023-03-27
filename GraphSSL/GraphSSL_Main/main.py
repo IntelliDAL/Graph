@@ -157,8 +157,8 @@ def main(args):
     deg4feat = args.deg4feat
     batch_size = 32 # args.batch_size
 
-    pretraindata = "IMDB-BINARY" # "MUTAG" # "REDDIT-BINARY" # "COLLAB" # "IMDB-MULTI" # "DD"
-    funedata = "IMDB-BINARY" # "MUTAG"  # "REDDIT-BINARY" # "COLLAB" # "IMDB-MULTI" # "DD"
+    pretraindata = "PROTEINS" # "MUTAG" # "IMDB-BINARY" # "REDDIT-BINARY" # "COLLAB" # "IMDB-MULTI" # "DD"
+    funedata = "PROTEINS" # "MUTAG" #  "IMDB-BINARY" # "REDDIT-BINARY" # "COLLAB" # "IMDB-MULTI" # "DD"
 
     graphs, (num_features, num_classes) = load_graph_classification_dataset(pretraindata, deg4feat=deg4feat)
 
@@ -201,7 +201,7 @@ if __name__ == "__main__":
 
 
 
-# IMDB-BINARY T1=T2=0.14
+# IMDB-BINARY T1=T2=0.14 PROTEINS
 # optimizer_1 = create_optimizer("adam", model, lr=0.0015, weight_decay=0.005)
 # optimizer_2 = create_optimizer("adam", model, lr=0.0010, weight_decay=0.005)
 # python main.py --lr 0.00015 --lr_f 0.005 --num_hidden 512 --num_heads 2 --weight_decay 0 --weight_decay_f 0 --max_epoch 60 --max_epoch_f 500 --mask_rate 0.5 --num_layers 2 --encoder gcn --decoder gcn --activation prelu --in_drop 0.2 --loss_fn sce --optimizer adam --replace_rate 0.0 --drop_edge_rate 0.0 --alpha_l 1 --norm batchnorm --pooling mean --batch_size 32 --alpha_l 1
