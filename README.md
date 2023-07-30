@@ -9,4 +9,3 @@
 | MVS-GCN: A prior brain structure learning-guided multi-view graph convolution network for autism spectrum disorder diagnosis, CIBM, 2022  | MVS-GCN  |
 |  ----  | ----  |
 | Exploring Attention and Self-supervised Learning Mechanism for Graph Similarity Learning, TNNLS, Under Review  | SNA-GSL  |
-% | % Towards Graph Structure-aware Self-supervised Representation Learning for Graph Classification, NN, Under Review  | GraphSSL  |
