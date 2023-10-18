@@ -833,7 +833,6 @@ def main():
                                     X_masked_36, X_unmasked_36 = process_data(X_36, Y_36, all_node_num, remain_node_num)
                                     X_masked_48, X_unmasked_48 = process_data(X_48, Y_48, all_node_num, remain_node_num)
 
-                                    # model
                                     feature_dim = remain_node_num
                                     X_train_24_array = [];X_train_0_24_array = []; X_train_masked_24_array = [];X_train_masked_rest_24_array = []; Y_train_24_array = []; \
                                     X_test_24_array = []; X_test_0_24_array = []; X_masked_test_24_array = []; Y_test_24_array = []
@@ -906,6 +905,7 @@ def main():
                                     result_total_36_ccc = []
                                     result_total_48_ccc = []
                                     for folder in range(folders):
+                                        # model
                                         model = Model(dropout=dropout, num_class=3, remain_node_num=remain_node_num,
                                                   lstm_hidden = lstm_hidden,
                                                   eton_outputchanel = eton_outputchanel,linear_dim1=linear_dim1,linear_dim2=linear_dim2)
