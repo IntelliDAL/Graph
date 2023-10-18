@@ -835,22 +835,6 @@ def main():
 
                                     # model
                                     feature_dim = remain_node_num
-                                    model = Model(dropout=dropout, num_class=3, remain_node_num=remain_node_num,
-                                                  lstm_hidden = lstm_hidden,
-                                                  eton_outputchanel = eton_outputchanel,linear_dim1=linear_dim1,linear_dim2=linear_dim2)
-                                    model.to(device)
-                                    params = list(model.parameters())
-                                    k = 0
-                                    # for i in params:
-                                    #     l = 1
-                                    #     print("该层的结构：" + str(list(i.size())))
-                                    #     for j in i.size():
-                                    #         l *= j
-                                    #     print("该层参数和：" + str(l))
-                                    #     k = k + l
-                                    # print("总参数数量和：" + str(k))
-                                    optimizer = optim.SGD(model.parameters(), lr=lr, weight_decay=decay, momentum=0.9, nesterov=True)
-                                    optimizer2 = optim.SGD(model.parameters(), lr=lr, weight_decay=decay, momentum=0.9, nesterov=True)
                                     X_train_24_array = [];X_train_0_24_array = []; X_train_masked_24_array = [];X_train_masked_rest_24_array = []; Y_train_24_array = []; \
                                     X_test_24_array = []; X_test_0_24_array = []; X_masked_test_24_array = []; Y_test_24_array = []
 
@@ -922,6 +906,22 @@ def main():
                                     result_total_36_ccc = []
                                     result_total_48_ccc = []
                                     for folder in range(folders):
+                                        model = Model(dropout=dropout, num_class=3, remain_node_num=remain_node_num,
+                                                  lstm_hidden = lstm_hidden,
+                                                  eton_outputchanel = eton_outputchanel,linear_dim1=linear_dim1,linear_dim2=linear_dim2)
+                                        model.to(device)
+                                        params = list(model.parameters())
+                                        k = 0
+                                        # for i in params:
+                                        #     l = 1
+                                        #     print("该层的结构：" + str(list(i.size())))
+                                        #     for j in i.size():
+                                        #         l *= j
+                                        #     print("该层参数和：" + str(l))
+                                        #     k = k + l
+                                        # print("总参数数量和：" + str(k))
+                                        optimizer = optim.SGD(model.parameters(), lr=lr, weight_decay=decay, momentum=0.9, nesterov=True)
+                                        optimizer2 = optim.SGD(model.parameters(), lr=lr, weight_decay=decay, momentum=0.9, nesterov=True)
                                         # train
                                         for epoch in range(1, epochs + 1):
                                             model.train()
