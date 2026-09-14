@@ -9,3 +9,4 @@
 | MVS-GCN: A prior brain structure learning-guided multi-view graph convolution network for autism spectrum disorder diagnosis, CIBM, 2022  | MVS-GCN  |
 |  ----  | ----  |
 | Exploring Attention and Self-supervised Learning Mechanism for Graph Similarity Learning, TNNLS, Under Review  | SNA-GSL  |
+| MEGSA: Adaptive Motif-Level Structural Alignment for Graph Similarity Learning | [MEGSA](MEGSA/) |
