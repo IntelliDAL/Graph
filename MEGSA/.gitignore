@@ -1,0 +1,25 @@
+# Python and local development files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Downloaded data, generated checkpoints, and experiment outputs
+/datasets/
+/model/
+/pretrain_model/
+*.pth
+*.pt
+/runs/
+/outputs/
+*.log
+
+# Local credentials
+.env
+.env.*
+!.env.example
